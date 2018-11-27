@@ -15,8 +15,8 @@ public class CompanySvc {
 
     public CompanySvc() {
         this.companies = new ArrayList<>();
-        this.companies.add(new Company("testUser", 28, "女"));
-        this.companies.add(new Company("testUser-2", 18, "男"));
+        this.companies.add(new Company("alibaba1", 20, "male", 6000));
+        this.companies.add(new Company("tengxun2", 19, "female", 7000));
     }
 
     public List<Company> getAll() {
