@@ -15,8 +15,7 @@ public class CompanySvc {
 
     public CompanySvc() {
         this.companies = new ArrayList<>();
-        this.companies.add(new Company("alibaba1", 20, "male", 6000));
-        this.companies.add(new Company("tengxun2", 19, "female", 7000));
+        this.companies.add(new Company("alibaba", 200));
     }
 
     public List<Company> getAll() {
@@ -26,7 +25,7 @@ public class CompanySvc {
 
     public int create(Company company) {
         this.idIndex = this.idIndex + 1;
-        company.setId(idIndex);
+    //    company.setId(idIndex);
         this.companies.add(company);
         return idIndex;
     }
@@ -36,7 +35,7 @@ public class CompanySvc {
         Optional<Company> optionalCompany = findCompanyById(companyId);
         if (optionalCompany.isPresent()) {
             this.companies.remove(optionalCompany.get());
-            updatedCompany.setId(companyId);
+       //     updatedCompany.setId(companyId);
             this.companies.add(updatedCompany);
             isSuccess = true;
         }
@@ -45,7 +44,7 @@ public class CompanySvc {
 
     private Optional<Company> findCompanyById(int companyId) {
         return this.companies.stream()
-                .filter(companyElement -> companyElement.getId() == companyId)
+        //        .filter(companyElement -> companyElement.getId() == companyId)
                 .findFirst();
     }
 

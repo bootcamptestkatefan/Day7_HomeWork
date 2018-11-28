@@ -1,58 +1,38 @@
 package com.tw.apistackbase.service;
 
+import java.util.ArrayList;
+
 public class Company {
 
+    private String companyName;
+    private int employeesNumber;
+    private ArrayList<Employee> employees;
 
     public Company() {
 
     }
 
-    public Company(String name, int age, String gender, int salary) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.salary = salary;
+    public Company(String companyName, int employeesNumber) {
+        this.companyName = companyName;
+        this.employeesNumber = employeesNumber;
+  //      this.employees = employees;
+
     }
 
-    private String name;
-    private int age;
-    private int id;
-    private String gender;
-    private int salary;
+    public void setCompanyName(String companyName) { this.companyName = companyName; }
 
-    public int getSalary() { return salary; }
-
-    public void setSalary(int salary) { this.salary = salary; }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setEmployeesNumber(int employeesNumber) {
+        this.employeesNumber = employeesNumber;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+    public int getEmployeesNumber() { return employeesNumber; }
 
-    public String getName() {
-        return name;
-    }
+    public ArrayList<Employee> getEmployees() { return employees; }
 
-    public int getAge() {
-        return age;
-    }
+    public void setEmployees(ArrayList<Employee> employees) { this.employees = employees; }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }

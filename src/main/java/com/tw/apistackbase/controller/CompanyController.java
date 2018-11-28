@@ -15,7 +15,7 @@ public class CompanyController {
     private CompanySvc companyService;
 
     @Autowired
-    public CompanyController(CompanySvc employeeService) {
+    public CompanyController(CompanySvc companyService) {
 
         this.companyService = companyService;
     }
@@ -41,7 +41,7 @@ public class CompanyController {
         return isUpdated ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping("/{employeeId}")
+    @DeleteMapping("/{companyId}")
     public ResponseEntity delete(@PathVariable int companyId) {
 
         boolean isDeleted = companyService.delete(companyId);
